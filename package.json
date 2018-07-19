@@ -6,7 +6,8 @@
   "scripts": {
     "dll": "cross-env NODE_ENV=development webpack --progress --colors --config webpack.config.dll.babel.js && cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.dll.babel.js",
     "start:client": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --hot --inline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=local nodemon ./server/app.js"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "less-file-alias": "^1.1.6",
     "less-loader": "^4.0.5",
     "less-vars-to-js": "^1.2.1",
+    "nodemon": "^1.18.3",
     "postcss-loader": "^2.0.10",
     "pre-commit": "^1.2.2",
     "precss": "^3.0.0",
