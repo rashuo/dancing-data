@@ -3,15 +3,15 @@ import BaseComponent from '@/component/BaseComponent';
 
 import './style.less'
 
-class Home extends BaseComponent {
+class Treasure extends BaseComponent {
 
   render() {
     return (
-      <div className="home-body">
-        hello home
+      <div className="treasure-body">
+        treasure page
       </div>
     );
   }
 }
 
-export default Home;
+export default Treasure;

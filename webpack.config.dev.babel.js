@@ -34,7 +34,7 @@ const plugins = [
   new HtmlWebpackPlugin(options.html[0])
 ];
 const webpackConfig = {
-  devtool: 'eval-source-map', // 生成 source map文件
+  // devtool: 'eval-source-map', // 生成 source map文件
   target: 'web', // webpack 能够为多种环境构建编译, 默认是 'web'，可省略 https://doc.webpack-china.org/configuration/target/
   resolve,
 
