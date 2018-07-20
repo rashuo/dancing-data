@@ -1,25 +1,28 @@
-const http = require('http');
-const Koa = require('koa');
-const config = require('./config');
-const initRouter = require('./router/init');
+import http from 'http';
+import Koa from 'koa';
+import config from './config';
+import initRouter from './router/init';
 
-const app = new Koa();
+class App {
+  constructor() {
+    this.app = new Koa();
 
-app.use(initRouter.routes());
+    this.initServer();
+    this.initMidderWare();
+  }
+  initMidderWare() {
+    this.initRoutes();
+  }
 
-console.log(initRouter.routes());
-app.use(ctx => {
-  ctx.body = 'Hello World';
-});
-
-const server = http.createServer(app.callback())
-
-server.listen(config.port)
-server.on('error', (error) => {
-  console.log(error);
-})
-server.on('listening', () => {
-  console.log('Listening on port: %d', config.port)
-})
-
-module.exports = app;
+  initRoutes() {
+    this.app.use(initRouter.routes());
+  }
+  initServer() {
+    this.server = http.createServer(this.app.callback());
+    this.server.listen(config.port);
+    this.server.on('listening', () => {
+      console.log('Listening on port: %d', config.port)
+    })
+  }
+}
+export default new App();

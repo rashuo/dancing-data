@@ -6,8 +6,8 @@
   "scripts": {
     "dll": "cross-env NODE_ENV=development webpack --progress --colors --config webpack.config.dll.babel.js && cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.dll.babel.js",
     "start:client": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --hot --inline",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=local nodemon ./server/app.js"
+    "start:server": "cross-env NODE_ENV=local nodemon --exec babel-node -- ./server/app.js",
+    "build:server": "cross-env NODE_ENV=production babel server -d public/server"
   },
   "repository": {
     "type": "git",
@@ -76,6 +76,7 @@
     "koa-static-plus": "^0.1.1",
     "koa-views": "^6.1.4",
     "koa2-history-api-fallback": "^0.0.5",
+    "mongoose": "^5.2.4",
     "prop-types": "^15.5.10",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
