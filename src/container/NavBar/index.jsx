@@ -54,6 +54,10 @@ class NavBar extends BaseComponent {
             <Icon type="appstore-o" />
             <span>百宝箱</span>
           </MenuItem>
+          <MenuItem key="lucky">
+            <Icon type="appstore-o" />
+            <span>幸运大转盘</span>
+          </MenuItem>
         </Menu>
       </div>
     );

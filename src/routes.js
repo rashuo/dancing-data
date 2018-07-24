@@ -4,6 +4,7 @@ import Home from 'bundle-loader?lazy!./container/Home';
 import Building from 'bundle-loader?lazy!./container/Building';
 import Property from 'bundle-loader?lazy!./container/Property';
 import Treasure from 'bundle-loader?lazy!./container/Treasure';
+import Lucky from 'bundle-loader?lazy!./container/Lucky';
 import LazyLoad from '@/component/LazyLoad';
 
 const loadingComponent = () => {
@@ -42,5 +43,6 @@ export default (
     <Route path="/building" component={createComponent(Building)} />
     <Route path="/property" component={createComponent(Property)} />
     <Route path="/treasure" component={createComponent(Treasure)}  />
+    <Route path="/lucky" component={createComponent(Lucky)} />
   </Switch>
 );
