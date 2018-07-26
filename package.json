@@ -7,7 +7,8 @@
     "dll": "cross-env NODE_ENV=development webpack --progress --colors --config webpack.config.dll.babel.js && cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.dll.babel.js",
     "start:client": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.babel.js --progress --colors --hot --inline",
     "start:server": "cross-env NODE_ENV=local nodemon --exec babel-node -- ./server/app.js",
-    "build:server": "cross-env NODE_ENV=production babel server -d public/server"
+    "build:server": "cross-env NODE_ENV=production babel server -d public/server",
+    "start:db": "mongod --config 'E:/mongodb/conf/mongod.cfg'"
   },
   "repository": {
     "type": "git",
